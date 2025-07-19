@@ -1,0 +1,24 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#history {
+  height: 100%;
+  width: 20%;
+  border-right: 2px solid black;
+}
+#main {
+  height: 100%;
+  width: 80%;
+}
