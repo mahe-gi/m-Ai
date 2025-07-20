@@ -1,16 +1,18 @@
 const chintu = "AIzaSyCWOyU_5gt2kftgMrFkw6v2IwSg2-Cgb5s";
+// give a prompt that can
+const prompt = "give me short and clear and precise";
 
 const main = document.getElementById("main");
 const newChat = document.getElementById("newChat");
 
 const inp = document.createElement("textarea");
-
 const askBtn = document.createElement("button");
-inp.setAttribute("type", "text");
 inp.setAttribute("id", "userInp");
-inp.placeholder = "ask something...";
 askBtn.setAttribute("id", "askbtn");
+inp.setAttribute("type", "text");
+inp.placeholder = "ask something...";
 askBtn.textContent = "🔎";
+
 const inpWrapper = document.createElement("div");
 inpWrapper.setAttribute("id", "inpWrapper");
 const btnWrapper = document.createElement("div");
@@ -19,6 +21,8 @@ const wrapper = document.createElement("div");
 wrapper.setAttribute("id", "wrapper");
 
 newChat.addEventListener("click", () => {
+  div.textContent = "";
+
   main.append(wrapper);
   wrapper.append(inpWrapper, btnWrapper);
   inpWrapper.append(inp);
@@ -45,7 +49,7 @@ function getAiData(inp) {
           {
             parts: [
               {
-                text: inp.value,
+                text: prompt + inp.value,
               },
             ],
           },
@@ -63,7 +67,12 @@ function getAiData(inp) {
       inp.value = "";
       displayChat(chatData);
     })
-    .catch((err) => console.log(err));
+    .catch((err) => {
+      span1.textContent = "err ";
+      console.error(err);
+      ai.append(span1);
+      chatDiv.append(ai);
+    });
 }
 
 const div = document.createElement("div");
