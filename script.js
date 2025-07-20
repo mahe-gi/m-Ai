@@ -1,4 +1,4 @@
-const apiKey = "AIzaSyCWOyU_5gt2kftgMrFkw6v2IwSg2-Cgb5s";
+const chintu = "AIzaSyCWOyU_5gt2kftgMrFkw6v2IwSg2-Cgb5s";
 
 const main = document.getElementById("main");
 const newChat = document.getElementById("newChat");
@@ -38,7 +38,7 @@ function getAiData(inp) {
       method: "POST",
       headers: {
         "Content-Type": "application / json",
-        "X-goog-api-key": apiKey,
+        "X-goog-api-key": chintu,
       },
       body: JSON.stringify({
         contents: [
@@ -99,4 +99,23 @@ function displayChat(chatData) {
 inp.addEventListener("input", () => {
   inp.style.height = "auto";
   inp.style.height = inp.scrollHeight + "px";
+});
+
+const menu = document.getElementById("menuWrapper");
+const history = document.getElementById("history");
+const menuWrapper = document.getElementById("menuWrapper");
+menu.addEventListener("click", () => {
+  const screenWidth = window.innerWidth;
+  if (screenWidth < 600) {
+    history.style.display = "block";
+    menuWrapper.style.display = "none";
+  }
+});
+history.addEventListener("click", () => {
+  const screenWidth = window.innerWidth;
+  if (screenWidth < 600) {
+    console.log("The current screen width is: " + screenWidth + " pixels.");
+    history.style.display = "none";
+    menuWrapper.style.display = "block";
+  }
 });

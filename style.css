@@ -28,7 +28,6 @@ body {
 #history {
   height: 100%;
   width: 20%;
-  border-right: 2px solid black;
   background-color: var(--nav);
 }
 #btnSec {
@@ -70,7 +69,6 @@ body {
   padding: 4vw 6vw;
   overflow-y: scroll;
 }
-
 #userWrapper {
   display: flex;
   justify-content: end;
@@ -89,7 +87,6 @@ body {
   line-height: 26px;
   margin-right: 10vw;
 }
-
 #wrapper {
   background-color: red;
   width: 100%;
@@ -112,7 +109,6 @@ body {
   justify-content: center;
   padding: 10px;
 }
-
 #askbtn {
   padding: 10px 10px;
   font-size: 20px;
@@ -121,7 +117,6 @@ body {
   cursor: pointer;
   color: var(--txt);
 }
-
 #userInp {
   width: 100%;
   min-height: 60px;
@@ -137,4 +132,33 @@ body {
 }
 textarea:focus {
   outline: none;
+}
+#menuWrapper {
+  position: absolute;
+  left: 8vw;
+  top: 8vw;
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  #history {
+    position: absolute;
+    width: 40%;
+    left: 0;
+    display: none;
+  }
+  #menuWrapper {
+    display: block;
+    cursor: pointer;
+  }
+
+  #main {
+    height: 100%;
+    width: 100%;
+    padding: 3vw;
+  }
+
+  #chatDiv {
+    padding: 3vw 0vw;
+  }
 }
