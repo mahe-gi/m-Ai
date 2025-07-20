@@ -1,3 +1,5 @@
+// const apiKey = "";
+
 const main = document.getElementById("main");
 const newChat = document.getElementById("newChat");
 
@@ -36,7 +38,7 @@ function getAiData(inp) {
       method: "POST",
       headers: {
         "Content-Type": "application / json",
-        "X-goog-api-key": "AIzaSyCWOyU_5gt2kftgMrFkw6v2IwSg2-Cgb5s",
+        "X-goog-api-key": apiKey,
       },
       body: JSON.stringify({
         contents: [
