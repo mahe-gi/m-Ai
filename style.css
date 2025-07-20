@@ -1,9 +1,19 @@
+@font-face {
+  font-family: mahe;
+  src: url(./assets/fonts/Lato-Regular.ttf);
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  --nav: #181818;
+  --body: #212121;
+  --inp: #313131;
+  --txtbg: #303030;
+  --txt: #ffffff;
+  font-family: mahe;
 }
-
 html,
 body {
   height: 100%;
@@ -11,14 +21,120 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--txt);
+  background-color: #181818;
 }
 
 #history {
   height: 100%;
   width: 20%;
   border-right: 2px solid black;
+  background-color: var(--nav);
+}
+#btnSec {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#historyChat {
+  width: 100%;
+  height: 90%;
+  overflow-y: auto;
+}
+#newChat {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.386);
+  cursor: pointer;
+  border-radius: 20px;
+  color: var(--txt);
 }
 #main {
   height: 100%;
   width: 80%;
+  background-color: var(--body);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: scroll;
+}
+#chatArea {
+  width: 100%;
+}
+#chatDiv {
+  width: 100%;
+  padding: 4vw 6vw;
+  overflow-y: scroll;
+}
+
+#userWrapper {
+  display: flex;
+  justify-content: end;
+}
+#userP {
+  text-align: start;
+  line-height: 26px;
+  padding: 12px 20px;
+  background-color: var(--txtbg);
+  border-radius: 15px;
+  margin-left: 10vw;
+}
+#aiP {
+  text-align: start;
+  padding: 30px 20px;
+  line-height: 26px;
+  margin-right: 10vw;
+}
+
+#wrapper {
+  background-color: red;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  background-color: var(--inp);
+  border-radius: 8px;
+}
+
+#inpWrapper {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  max-width: 600px;
+}
+#btnWrapper {
+  height: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  padding: 10px;
+}
+
+#askbtn {
+  padding: 10px 10px;
+  font-size: 20px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: var(--txt);
+}
+
+#userInp {
+  width: 100%;
+  min-height: 60px;
+  padding: 12px;
+  font-size: 1rem;
+  background-color: var(--inp);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  resize: none;
+  overflow: hidden;
+  line-height: 1.5;
+}
+textarea:focus {
+  outline: none;
 }
