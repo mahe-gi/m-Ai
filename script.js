@@ -1,4 +1,4 @@
-// const apiKey = "";
+const apiKey = "AIzaSyCWOyU_5gt2kftgMrFkw6v2IwSg2-Cgb5s";
 
 const main = document.getElementById("main");
 const newChat = document.getElementById("newChat");
